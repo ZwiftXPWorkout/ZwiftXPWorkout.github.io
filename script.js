@@ -93,8 +93,9 @@ function createOutput() {
     
     createOpenTag("workout");
     
+    let powerPercentage = power.value / 100;
     for (let i = 0; i < minutes.value; i++) {
-        createHalfTag(`IntervalsT Repeat="1" OnDuration="30" OffDuration="30" OnPower="${power.value}" OffPower="${power.value}" pace="0"`);
+        createHalfTag(`IntervalsT Repeat="1" OnDuration="30" OffDuration="30" OnPower="${powerPercentage}" OffPower="${powerPercentage}" pace="0"`);
     }
 
     createCloseTag("workout");
