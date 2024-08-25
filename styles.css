@@ -1,0 +1,120 @@
+@font-face {
+    font-family: "ZwiftSprint-Black";
+    src: url("fonts/ZwiftSprint-Black.woff") format("woff");
+}
+
+@font-face {
+    font-family: "ZwiftSprint-Regular";
+    src: url("fonts/ZwiftSprint-Regular.woff") format("woff");
+}
+
+body {
+    background-color: rgb(32, 34, 36);
+}
+
+label {
+    font-family: "ZwiftSprint-Regular";
+    color: rgb(162, 154, 142);
+    height: 2rem;
+    user-select: none;
+}
+
+input, textarea {
+    background-color: rgb(24, 26, 27);
+    color: rgb(181, 175, 166);
+    border-color: rgb(55, 60, 62);
+    border-radius: 5px;
+    border-style: solid;
+}
+
+input, textarea {
+    font-family: "ZwiftSprint-Regular" !important;
+    border-color: rgb(227, 230, 231);
+    border-width: 2px !important;
+    height: 2.5rem;
+}
+
+input, textarea {
+    padding-left: 12px;
+}
+
+input:focus, textarea:focus {
+    border-color: rgba(0, 135, 192, 0.5) !important;
+    box-shadow: rgba(0, 118, 167, 0.2) 0px 0px 0.5rem 0.125rem !important;
+}
+
+input[type="submit"], input[type="button"] {
+    font-family: "ZwiftSprint-Black";
+    background-color: rgb(0, 147, 209);
+    color: rgb(255, 255, 255);
+    border-radius: 5px;
+}
+
+input[type="button"] {
+    background-color: rgb(0, 22, 31);
+    border-color: rgb(227, 230, 231);
+}
+
+h2 {
+    font-family: "ZwiftSprint-Black";
+    color: rgb(209, 205, 199);
+}
+
+input[type="number"] {
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 0px;
+    line-height: 22px;
+}
+
+#description {
+    resize: none;
+}
+
+#card-top {
+    border-style: solid;
+    border-width: 2px;
+    border-color: rgb(227, 230, 231);
+    border-radius: 10px;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+}
+
+#card-top-middle, #card-middle {
+    border-style: solid;
+    border-width: 2px;
+    border-color: rgb(227, 230, 231);
+    border-top: none;
+}
+
+#card-bottom {
+    border-style: solid;
+    background-color: rgb(240, 242, 243);
+    border-color: rgb(227, 230, 231);
+    border-width: 2px;
+    border-radius: 10px;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+    border-top: none;
+}
+
+.unit {
+    padding-top: 10px;
+    padding-left: 12px;
+    padding-right: 12px;
+    border-bottom-left-radius: 4px;
+    border-bottom-right-radius: 0px;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 0px;
+    border-style: solid;
+    border-width: 2px;
+    border-right-style: none;
+    border-right-width: 0px;
+    font-size: 14px;
+    background-color: rgb(240, 242, 243);
+    border-color: rgb(227, 230, 231);
+    border-right-color: rgb(102, 114, 119);
+    color: rgb(102, 114, 119);
+    line-height: 20px;
+    font-family: "ZwiftSprint-Black";
+    height: 2.5rem;
+}
