@@ -125,12 +125,29 @@ function main() {
     });
 
     document.querySelectorAll("input[type=number]").forEach((element) => {
-        element.addEventListener("input", (_) => {
-            if (element.value === "") {
-                element.value = "0";
-            } else if (element.value[0] === "0") {
+        element.addEventListener("input", (event) => {
+            if (event.data && event.data.includes(".")) {
                 element.value = element.value.slice(1);
             }
+
+            if (element.value === "") {
+                element.value = "0";
+                element.classList.add("error");
+            } else if (element.value[0] === "0" && element.value.length > 1) {
+                element.value = element.value.slice(1);
+                element.classList.remove("error");
+            } else if (parseInt(element.value) > parseInt(element.max)) {
+                element.value = element.max;
+            }
+        });
+    });
+
+    document.querySelectorAll(".bottom-button").forEach((element) => {
+        element.addEventListener("mousedown", () => {
+            element.classList.add("active");
+        });
+        element.addEventListener("mouseup", () => {
+            element.classList.remove("active");
         });
     });
 }
