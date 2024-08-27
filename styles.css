@@ -56,7 +56,7 @@
 }
 
 body {
-    background-color: rgb(32, 34, 36);
+    background-color: #1b1d1e !important;
 }
 
 label {
@@ -76,18 +76,25 @@ input, textarea {
 
 input, textarea {
     font-family: "ZwiftSprint-Regular" !important;
-    border-color: rgb(227, 230, 231);
+    border-color: #373c3e !important;
     border-width: 2px !important;
     height: 2.5rem;
+    background-color: #181a1b !important;
+    color: #b5afa6 !important;
+}
+
+input::placeholder {
+    color: #b5afa6 !important;
 }
 
 input:focus, textarea:focus {
     border-color: rgba(0, 135, 192, 0.5) !important;
     box-shadow: rgba(0, 118, 167, 0.2) 0px 0px 0.5rem 0.125rem !important;
+    color: #e8e6e3 !important;
 }
 
 input[type="submit"], input[type="button"] {
-    font-family: "ZwiftSprint-Black";
+    font-family: "ZwiftSprint-Black" !important;
     background-color: rgb(0, 147, 209);
     color: rgb(255, 255, 255);
     border-radius: 5px;
@@ -100,13 +107,13 @@ input[type="button"] {
 
 h2 {
     font-family: "ZwiftSprint-Black";
-    color: rgb(209, 205, 199);
+    color: #d1cdc7 !important;
 }
 
 input[type="number"] {
     border-top-left-radius: 0px;
     border-bottom-left-radius: 0px;
-    line-height: 22px;
+    line-height: 1rem;
 }
 
 #description {
@@ -116,7 +123,7 @@ input[type="number"] {
 #card-top {
     border-style: solid;
     border-width: 2px;
-    border-color: rgb(227, 230, 231);
+    border-color: #373c3e;
     border-radius: 10px;
     border-bottom-left-radius: 0px;
     border-bottom-right-radius: 0px;
@@ -125,14 +132,14 @@ input[type="number"] {
 #card-top-middle, #card-middle {
     border-style: solid;
     border-width: 2px;
-    border-color: rgb(227, 230, 231);
+    border-color: #373c3e;
     border-top: none;
 }
 
 #card-bottom {
     border-style: solid;
-    background-color: rgb(240, 242, 243);
-    border-color: rgb(227, 230, 231);
+    background-color: #202224;
+    border-color: #373c3e;
     border-width: 2px;
     border-radius: 10px;
     border-top-left-radius: 0px;
@@ -153,11 +160,25 @@ input[type="number"] {
     border-right-style: none;
     border-right-width: 0px;
     font-size: 14px;
-    background-color: rgb(240, 242, 243);
+    background-color: #202224;
     border-color: rgb(227, 230, 231);
     border-right-color: rgb(102, 114, 119);
-    color: rgb(102, 114, 119);
-    line-height: 20px;
+    color: #a29a8e;
+    line-height: 1rem;
     font-family: "ZwiftSprint-Black";
     height: 2.5rem;
+    border-color: #373c3e;
+}
+
+#reset, #submit {
+    border: none;
+    color: #e8e6e3 !important;
+}
+
+#reset {
+    background-color: #00161f !important;
+}
+
+#submit {
+    background-color: #0076a7 !important;
 }
