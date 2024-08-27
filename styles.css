@@ -86,7 +86,7 @@ label {
 }
 
 input::placeholder {
-    color: rgb(162, 154, 142) !important;
+    color: #8d8475 !important;
 }
 
 input:focus, textarea:focus {
@@ -189,4 +189,8 @@ input[type="number"] {
 
 .error {
     border-color: #660d0d !important;
+}
+
+#recovery-checkbox {
+    box-shadow: none;
 }
