@@ -81,10 +81,6 @@ input, textarea {
     height: 2.5rem;
 }
 
-input, textarea {
-    padding-left: 12px;
-}
-
 input:focus, textarea:focus {
     border-color: rgba(0, 135, 192, 0.5) !important;
     box-shadow: rgba(0, 118, 167, 0.2) 0px 0px 0.5rem 0.125rem !important;
