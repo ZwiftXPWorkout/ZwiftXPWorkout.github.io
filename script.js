@@ -123,6 +123,16 @@ function main() {
     resetButton.addEventListener("click", () => {
         reset();
     });
+
+    document.querySelectorAll("input[type=number]").forEach((element) => {
+        element.addEventListener("input", (_) => {
+            if (element.value === "") {
+                element.value = "0";
+            } else if (element.value[0] === "0") {
+                element.value = element.value.slice(1);
+            }
+        });
+    });
 }
 
 document.addEventListener("DOMContentLoaded", () => {
