@@ -132,13 +132,20 @@ function main() {
 
             if (element.value === "") {
                 element.value = "0";
-                element.classList.add("error");
             } else if (element.value[0] === "0" && element.value.length > 1) {
                 element.value = element.value.slice(1);
-                element.classList.remove("error");
             } else if (parseInt(element.value) > parseInt(element.max)) {
                 element.value = element.max;
             }
+        });
+
+        element.addEventListener("blur", () => {
+            if (!element.checkValidity()) {
+                element.classList.add("is-invalid");
+                return;
+            }
+
+            element.classList.remove("is-invalid");
         });
     });
 

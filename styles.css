@@ -9,78 +9,24 @@
 }
 
 #application {
-    width: 90%;
-    max-width: 90%;
+    width: 95%;
+    max-width: 500px;
 }
 
 #explanation {
-    width: 80%;
+    width: 95%;
+    max-width: 600px;
 }
 
 @media (min-width: 576px) {
     #application {
-        width: 70%;
-        max-width: 70%;
-    }
-    
-    #explanation {
-        width: 70%;
+        width: 80%;
     }
 }
 
 @media (min-width: 768px) {
     #application {
-        width: 60%;
-        max-width: 60%;
-    }
-    
-    #explanation {
-        width: 60%;
-    }
-}
-
-@media (min-width: 992px) {
-    #application {
-        width: 50%;
-        max-width: 50%;
-    }
-    
-    #explanation {
-        width: 60%;
-    }
-}
-
-@media (min-width: 1200px) {
-    #application {
-        width: 40%;
-        max-width: 40%;
-    }
-    
-    #explanation {
-        width: 50%;
-    }
-}
-
-@media (min-width: 1400px) {
-    #application {
-        width: 30%;
-        max-width: 30%;
-    }
-    
-    
-    #explanation {
-        width: 40%;
-    }
-}
-
-@media (min-width: 2000px) {
-    #application {
-        width: 20%;
-        max-width: 20%;
-    }
-
-    #explanation {
-        width: 30%;
+        width: 65%;
     }
 }
 
@@ -115,7 +61,7 @@ label {
 }
 
 input::placeholder {
-    color: #8d8475 !important;
+    color: #9e9689 !important;
 }
 
 input:focus, textarea:focus {
@@ -133,9 +79,8 @@ h3, h5 {
     color: #d1cdc7;
 }
 
-input[type="number"] {
-    border-top-left-radius: 0px;
-    border-bottom-left-radius: 0px;
+.number-input {
+    border-radius: 5px !important;
     line-height: 1rem;
 }
 
@@ -221,10 +166,28 @@ input[type="number"] {
     font-family: "ZwiftSprint-Black";
 }
 
-.error {
-    border-color: #660d0d !important;
-}
-
 #recovery-checkbox {
     box-shadow: none;
+    background-color: #1b1d1e;
+    border-color: #373c3e;
+    border-width: 2px;
+    height: 1.2rem;
+    width: 1.2rem;
+}
+
+.invalid-feedback {
+    font-family: "ZwiftSprint-Regular";
+    font-size: 1rem;
+    margin-bottom: -1rem;
+    color: rgb(162, 154, 142);
+}
+
+.error-circle {
+    display: block;
+    background-color: rgb(204, 0, 0);
+    border-radius: 50%;
+    width: .5625rem;
+    height: .5625rem;
+    min-width: .5625rem;
+    min-height: .5625rem;
 }
