@@ -183,7 +183,6 @@ h3, h5 {
 }
 
 .error-circle {
-    display: block;
     background-color: rgb(204, 0, 0);
     border-radius: 50%;
     width: .5625rem;

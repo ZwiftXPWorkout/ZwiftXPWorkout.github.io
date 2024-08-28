@@ -38,11 +38,11 @@ function updateOutput(string) {
 }
 
 function downloadFile(name, content) {
-    const a = document.createElement('a');
+    const a = document.createElement("a");
     const blob = new Blob([content]);
     const url = URL.createObjectURL(blob);
-    a.setAttribute('href', url);
-    a.setAttribute('download', name);
+    a.setAttribute("href", url);
+    a.setAttribute("download", name);
     a.click();
     output = [];
 }
@@ -132,20 +132,13 @@ function main() {
 
             if (element.value === "") {
                 element.value = "0";
+                element.classList.add("is-invalid");
             } else if (element.value[0] === "0" && element.value.length > 1) {
                 element.value = element.value.slice(1);
+                element.classList.remove("is-invalid");
             } else if (parseInt(element.value) > parseInt(element.max)) {
-                element.value = element.max;
-            }
-        });
-
-        element.addEventListener("blur", () => {
-            if (!element.checkValidity()) {
                 element.classList.add("is-invalid");
-                return;
             }
-
-            element.classList.remove("is-invalid");
         });
     });
 
