@@ -108,10 +108,12 @@ function correctInput(element) {
         element.classList.add("is-invalid");
     } else if (element.value[0] === "0" && element.value.length > 1) {
         element.value = element.value.slice(1);
+    }
+
+    const intValue = parseInt(element.value);
+    if (intValue >= parseInt(element.min) && intValue <= parseInt(element.max)) {
         element.classList.remove("is-invalid");
-    } else if (parseInt(element.value) > parseInt(element.max)) {
-        element.classList.add("is-invalid");
-    } else if (element.value === "0") {
+    } else {
         element.classList.add("is-invalid");
     }
 }
