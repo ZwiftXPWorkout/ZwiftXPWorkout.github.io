@@ -102,6 +102,20 @@ function createOutput() {
     createCloseTag("workout_file");
 }
 
+function correctInput(element) {
+    if (element.value === "") {
+        element.value = "0";
+        element.classList.add("is-invalid");
+    } else if (element.value[0] === "0" && element.value.length > 1) {
+        element.value = element.value.slice(1);
+        element.classList.remove("is-invalid");
+    } else if (parseInt(element.value) > parseInt(element.max)) {
+        element.classList.add("is-invalid");
+    } else if (element.value === "0") {
+        element.classList.add("is-invalid");
+    }
+}
+
 function main() {
     author = document.getElementById("author");
     workoutName = document.getElementById("name");
@@ -125,20 +139,13 @@ function main() {
     });
 
     document.querySelectorAll("input[type=number]").forEach((element) => {
+        correctInput(element);
         element.addEventListener("input", (event) => {
             if (event.data && event.data.includes(".")) {
                 element.value = element.value.slice(1);
             }
 
-            if (element.value === "") {
-                element.value = "0";
-                element.classList.add("is-invalid");
-            } else if (element.value[0] === "0" && element.value.length > 1) {
-                element.value = element.value.slice(1);
-                element.classList.remove("is-invalid");
-            } else if (parseInt(element.value) > parseInt(element.max)) {
-                element.classList.add("is-invalid");
-            }
+            correctInput(element);
         });
     });
 
